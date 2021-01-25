@@ -13,11 +13,25 @@ public class RecipeRepo {
         n++;
     }
 
+    void modifyAndAdd(Recipe recipe){
+        recipies[n] = recipe;
+        n++;
+    }
+
     void displayAll() {
         for (int i = 0; i < recipies.length && recipies[i] != null; i++) {
             System.out.println("----------");
             recipies[i].display();
+            System.out.println();
+        }
+
+    }
+
+    void displayAllModified() {
+        for (int i = 0; i < recipies.length && recipies[i] != null; i++) {
             System.out.println("----------");
+            recipies[i].modify();
+            System.out.println();
         }
 
     }
